@@ -32,8 +32,8 @@ hello_world_qt/
 
 1. **Sistema operativo**
 
-   * **Windows 11** (la mayoría de los alumnos).
-   * **macOS** (un alumno).
+   * **Windows 11** 
+   * **macOS** 
 
 2. **Instalaciones necesarias**
 
