@@ -1,13 +1,4 @@
 # Hello World con Qt
-A continuación tienes un instructivo completo que podrás incluir como **README.md** en tu repositorio GitHub. El objetivo es que tus alumnos, al clonar el proyecto, puedan seguir cada paso para abrirlo en VS Code, configurarlo y compilarlo (“Ctrl+Shift+B”) y depurarlo (“F5”), tanto en Windows 11 (8 alumnos) como en macOS (1 alumno). El flujo asume que ya tienen instalado:
->>>>>>> efbbdaa (Inicializar proyecto C++ con estructura profesional)
-
-* Qt 6.9.0 (con MinGW en Windows; con la versión nativa de Qt en macOS).
-* Visual Studio Code (VS Code).
-* La extensión C/C++ de Microsoft en VS Code.
-
----
-
 # Instructivo para clonar, configurar y compilar **hello\_world\_qt** en VS Code
 
 ## 1. Estructura del repositorio
