@@ -1,0 +1,26 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Depurar Qt (mingw)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/release/hello_world_qt.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "C:/Qt/6.9.0/mingw_64/bin/gdb.exe",
+      "setupCommands": [
+        {
+          "description": "Habilitar pretty-printing en GDB",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "build (mingw32-make)"
+    }
+  ]
+}

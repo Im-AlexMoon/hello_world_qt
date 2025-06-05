@@ -1,0 +1,29 @@
+{
+  "version": 4,
+  "configurations": [
+    {
+      "name": "Windows-Mingw",
+      "compilerPath": "C:/Qt/6.9.0/mingw_64/bin/g++.exe",
+      "intelliSenseMode": "windows-gcc-x64",
+      "cStandard": "c11",
+      "cppStandard": "c++17",
+      "includePath": [
+        "${workspaceFolder}/include",
+        "C:/Qt/6.9.0/mingw_64/include",
+        "C:/Qt/6.9.0/mingw_64/include/QtWidgets",
+        "C:/Qt/6.9.0/mingw_64/include/QtCore",
+        "C:/Qt/6.9.0/mingw_64/include/QtGui"
+      ],
+      "defines": [
+        "UNICODE",
+        "_UNICODE"
+      ],
+      "browse": {
+        "path": [
+          "${workspaceFolder}/include",
+          "C:/Qt/6.9.0/mingw_64/include"
+        ]
+      }
+    }
+  ]
+}
