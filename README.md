@@ -325,7 +325,7 @@ Al presionar **F5**, queremos que VS Code:
 
 ---
 
-## 6. Pasos finales para tus alumnos
+## 6. Pasos finales
 
 ### 6.1. Clonar el repositorio
 
