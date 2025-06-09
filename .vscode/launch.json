@@ -12,7 +12,7 @@
       "environment": [],
       "externalConsole": false,
       "MIMode": "gdb",
-      "miDebuggerPath": "C:/Qt/6.9.0/mingw_64/bin/gdb.exe",
+      "miDebuggerPath": "C:\\msys64\\ucrt64\\bin\\gdb.exe",
       "setupCommands": [
         {
           "description": "Habilitar pretty-printing en GDB",
