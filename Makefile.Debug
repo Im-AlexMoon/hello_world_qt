@@ -801,7 +801,11 @@ debug/MainWindow.o: src/MainWindow.cpp include/MainWindow.h \
 		C:/Qt/6.9.1/mingw_64/include/QtWidgets/QMessageBox \
 		C:/Qt/6.9.1/mingw_64/include/QtWidgets/qmessagebox.h \
 		C:/Qt/6.9.1/mingw_64/include/QtWidgets/qdialog.h \
-		C:/Qt/6.9.1/mingw_64/include/QtWidgets/qdialogbuttonbox.h
+		C:/Qt/6.9.1/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
+		C:/Qt/6.9.1/mingw_64/include/QtWidgets/QCheckBox \
+		C:/Qt/6.9.1/mingw_64/include/QtWidgets/qcheckbox.h \
+		C:/Qt/6.9.1/mingw_64/include/QtGui/QFont \
+		C:/Qt/6.9.1/mingw_64/include/QtGui/QPalette
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\MainWindow.o src\MainWindow.cpp
 
 debug/moc_MainWindow.o: debug/moc_MainWindow.cpp 

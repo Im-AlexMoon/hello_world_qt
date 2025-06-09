@@ -21,6 +21,25 @@
         }
       ],
       "preLaunchTask": "build (mingw32-make)"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "c:/Users/Alexander_Moon/Desktop/Repositorios/C++_Repositories/hello_world_qt/src",
+      "program": "c:/Users/Alexander_Moon/Desktop/Repositorios/C++_Repositories/hello_world_qt/src/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
     }
   ]
 }

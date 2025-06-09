@@ -5,6 +5,9 @@
 #include <QVBoxLayout>
 #include <QHBoxLayout>
 #include <QMessageBox>
+#include <QCheckBox>
+#include <QFont>
+#include <QPalette>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent),
@@ -16,6 +19,14 @@ MainWindow::MainWindow(QWidget *parent)
     // 1) Configurar la ventana principal
     setWindowTitle("Ejemplo Qt – Controles Básicos");
     resize(600, 400);
+    setAutoFillBackground(true);
+
+    // Tipografía y colores básicos
+    QFont uiFont("Arial", 10);
+    setFont(uiFont);
+    label_->setFont(QFont("Arial", 14, QFont::Bold));
+    label_->setStyleSheet("color: darkblue;");
+    textEdit_->setFont(QFont("Courier New", 10));
 
     // 2) Barra de menú con acción "Salir"
     QMenu *fileMenu = menuBar()->addMenu("&Archivo");
@@ -31,6 +42,8 @@ MainWindow::MainWindow(QWidget *parent)
 
     // 5) Conectar el botón al slot
     connect(button_, &QPushButton::clicked, this, &MainWindow::on_buttonClicked);
+    connect(lineEdit_, &QLineEdit::textChanged, this, [this](const QString &t)
+            { statusBar()->showMessage(QString("Caracteres: %1").arg(t.length())); });
 
     // 6) Crear un widget central con layout
     QWidget *central = new QWidget(this);
@@ -45,7 +58,28 @@ MainWindow::MainWindow(QWidget *parent)
     hbox->addWidget(new QLabel("Ingresa texto:", this));
     hbox->addWidget(lineEdit_);
     hbox->addWidget(button_);
+    QPushButton *clearButton = new QPushButton("Limpiar", this);
+    hbox->addWidget(clearButton);
+    QCheckBox *darkCheck = new QCheckBox("Modo oscuro", this);
+    hbox->addWidget(darkCheck);
     vbox->addLayout(hbox);
+
+    connect(clearButton, &QPushButton::clicked, [this]()
+            {
+        lineEdit_->clear();
+        textEdit_->clear();
+        statusBar()->showMessage("Contenido limpiado", 2000); });
+    connect(darkCheck, &QCheckBox::toggled, [this](bool checked)
+            {
+        QPalette pal = palette();
+        if (checked) {
+            pal.setColor(QPalette::Window, QColor(53, 53, 53));
+            pal.setColor(QPalette::WindowText, Qt::white);
+        } else {
+            pal.setColor(QPalette::Window, Qt::white);
+            pal.setColor(QPalette::WindowText, Qt::black);
+        }
+        setPalette(pal); });
 
     // QLabel y QTextEdit para mostrar líneas
     vbox->addWidget(new QLabel("Editor de Texto:", this));
